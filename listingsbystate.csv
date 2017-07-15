@@ -1,6 +1,6 @@
-State,Id,Name,City
-Illinois,0,Listing A,Chicago
-Illinois,1,Listing B,Chicago
-Minnesota,2,Listing C,Minneapolis
-Illinois,3,Listing D,Evanston
-Texas,4,Listing E,Dallas
+State,City,Id,Name
+Illinois,Chicago,0,Listing A
+Illinois,Chicago,1,Listing B
+Minnesota,Minneapolis,2,Listing C
+Illinois,Evanston,3,Listing D
+Texas,Dallas,4,Listing E
