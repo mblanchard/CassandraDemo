@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS listings_by_state (
   name text,
   city text,
   PRIMARY KEY (state, city)
-)
+);
 ```
 ### Import sample data from csv
 ```
