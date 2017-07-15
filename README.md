@@ -3,6 +3,7 @@
 ### Fetch sample data
 ```
 wget https://raw.githubusercontent.com/mblanchard/CassandraDemo/master/listings.csv
+wget https://raw.githubusercontent.com/mblanchard/CassandraDemo/master/listingsbystate.csv
 ```
 
 ### Authenticate/connect to local C\* node using cqlsh
