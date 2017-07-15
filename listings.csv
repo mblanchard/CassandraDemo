@@ -1,6 +1,6 @@
-Id,Name,City,State,Average Rating,Description
-0,Listing A,Chicago,Illinois,4.2,Luxury apartments that define the new standard of living in Downtown Chicago.
-1,Listing B,Chicago,Illinois,2.5,Apartments that provide the premier luxury highrise living you want and the lakefront views you desire.
-2,Listing C,Minneapolis,Minnesota,3.5,In the heart of downtown.
-3,Listing D,Evanston,Illinois,4.3,Just steps away from the Northwestern campus.
-4,Listing E,Dallas,Texas,4.7,In the middle of the West End Historic District.
+Id,Average Rating,City,Description,Name,State
+0,4.2,Chicago,Luxury apartments that define the new standard of living in Downtown Chicago.,Listing A,Illinois
+1,2.5,Chicago,Apartments that provide the premier luxury highrise living you want and the lakefront views you desire.,Listing B,Illinois
+2,3.5,Minneapolis,In the heart of downtown.,Listing C,Minnesota
+3,4.3,Evanston,Just steps away from the Northwestern campus.,Listing D,Illinois
+4,4.7,Dallas,In the middle of the West End Historic District.,Listing E,Texas
