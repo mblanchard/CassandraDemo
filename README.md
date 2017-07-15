@@ -23,11 +23,11 @@ CREATE KEYSPACE IF NOT EXISTS demo
 use demo;
 CREATE TABLE IF NOT EXISTS listings (
   listing_id int,
-  name text,
-  city text,
-  state text,
   average_review double,
-  description text,  
+  city text,
+  description text,
+  name text,  
+  state text,   
   PRIMARY KEY (listing_id)
 );
 
