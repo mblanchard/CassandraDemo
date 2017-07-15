@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS listings (
 
 CREATE TABLE IF NOT EXISTS listings_by_state (
   state text,
-  listing_id int,
-  name text,
   city text,
+  listing_id int,
+  name text, 
   PRIMARY KEY (state, city)
 );
 ```
