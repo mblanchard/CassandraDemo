@@ -9,4 +9,11 @@ CREATE KEYSPACE IF NOT EXISTS demo
 ```
 ### Creating a table
 ```
-CREATE TABLE IF NOT EXISTS listings
+using demo;
+CREATE TABLE IF NOT EXISTS listings (
+  name text,
+  state text,
+  city text
+  PRIMARY KEY (name, state)
+);
+```
