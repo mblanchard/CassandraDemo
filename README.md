@@ -42,5 +42,5 @@ CREATE TABLE IF NOT EXISTS listings_by_state (
 ### Import sample data from csv
 ```
 COPY demo.listings FROM 'listings.csv' WITH DELIMITER=',' AND HEADER=TRUE;
-COPY demo.listingsbystate FROM 'listingsbystate.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+COPY demo.listings_by_state FROM 'listingsbystate.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
