@@ -42,8 +42,12 @@ CREATE TABLE IF NOT EXISTS listings (
   PRIMARY KEY (listing_id)
 );
 ```
+### Performing a write
+INSERT INTO demo.listings (listing_id, name, city, state)
+  VALUES (9,"
+  USING option AND option
 
-### Importing some sample data from csv
+### Writing some more sample data from csv
 ```
 COPY demo.listings FROM 'listings.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ```
