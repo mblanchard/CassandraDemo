@@ -43,9 +43,20 @@ CREATE TABLE IF NOT EXISTS listings (
 );
 ```
 ### Performing a write
+```
 INSERT INTO demo.listings (listing_id, name, city, state)
-  VALUES (9,"
+  VALUES (9,'Demo Listing','Chicago','Illinois');
   USING option AND option
+```
+Note that not all columns are referenced. No nulls or placeholders will be stored, those columns just won't be captured.
+
+### What's in a write?
+- Persisted sequentially to the commit log on disk
+- Written to the memtable (in-memory)
+- Once memtable threshold is reached, data is flushed to corresponding immutable SSTables
+- Periodic compaction reduces all versions of a given row across SSTables and produces one complete row, using the latest timestamp for each column
+- Deletes are just writes. The data is marked with a tombstone, and is ignored during compaction.
+- Updates are also just writes. The new data is stored alongside the old in memtable/SSTables, and on read the latest record is returned.
 
 ### Writing some more sample data from csv
 ```
@@ -55,6 +66,20 @@ COPY demo.listings FROM 'listings.csv' WITH DELIMITER=',' AND HEADER=TRUE;
 ### Querying the table
 ```
 SELECT * FROM listings;
+```
+
+### What's in a read?
+- Check the memtable (recent writes will be captured here)
+- Check the row cache, if enabled (hot/frequently accessed rows are cached here)
+- On a memtable/cache miss, look at likely target SSTables in the bloom filter
+  - Bloom filters are probabilistic, they can only provide potential matches and definite non-matches
+- Check the partition key cache for requested partition key, if enabled
+  - It will contain the disk-offset of frequently accessed partition keys
+- Otherwise, use the partition summary/partition index to find the disk offset for the requested partition key and read sequentially.
+- Take all returned columns associated with the partition key, produce a most-recent row in memory (write timestamps) and return row
+
+### Additional querying
+```
 SELECT * FROM listings WHERE listing_id = 2;
 SELECT listing_id FROM listings WHERE state = 'Illinois';
 ```
