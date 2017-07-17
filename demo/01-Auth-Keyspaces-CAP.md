@@ -7,6 +7,7 @@ wget https://raw.githubusercontent.com/mblanchard/CassandraDemo/master/listingsb
 ```
 
 ### Authenticate/connect to local C\* node using cqlsh
+- cqlsh is a CQL shell
 ```
 cqlsh -u cassandra -p [PASSWORD]
 ```
