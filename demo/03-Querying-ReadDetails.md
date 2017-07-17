@@ -18,4 +18,6 @@ SELECT * FROM listings;
 SELECT * FROM listings WHERE listing_id = 2;
 SELECT listing_id FROM listings WHERE state = 'Illinois';
 ```
+
+### Questions
 Why didn't this last query work as expected?
