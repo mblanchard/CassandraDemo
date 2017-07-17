@@ -28,4 +28,7 @@ CREATE KEYSPACE IF NOT EXISTS demo
 - If consistency is demanded, replication factor and consistency levels can be modified.
 - Read or write consistency level of (replication factor/2 + 1) >> QUORUM
 - Read consistency level + write consistency level >= replication factor + 1 >> Consistency
-- Why would we want to avoid a replication factor of 2?
+
+### Questions
+- Why would we want to have a replication factor greater than 2?
+- In this demo, our cluster has 4 nodes. Any lower, and our replication factor of 3 would not be reasonable. Why is that?
