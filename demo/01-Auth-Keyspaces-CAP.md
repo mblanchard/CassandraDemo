@@ -13,6 +13,7 @@ cqlsh -u cassandra -p [PASSWORD]
 ```
 
 ### Creating a keyspace
+- Keyspace ~= database
 - Defines the replication strategy
 - Usually one per application
 ```
