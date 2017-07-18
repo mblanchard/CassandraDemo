@@ -5,5 +5,7 @@
    - C\*/CQL also imposes restrictions on sorting/filtering on read
  - Cassandra was developed internally at Facebook in 2008, became Apache project in 2010
  
-### Where can I learn more (beyond this short introduction)
- - [Apache Docs](http://cassandra.apache.org/doc/latest/)
+### Where can I learn more?
+ - [Apache docs](http://cassandra.apache.org/doc/latest/)
+ - [DataStax docs/training materials](http://docs.datastax.com/en/landing_page/doc/index.html) 
+ - [O'Reilly exam prep/certification](http://www.oreilly.com/data/cassandracert)
