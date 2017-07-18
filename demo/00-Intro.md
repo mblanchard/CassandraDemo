@@ -6,4 +6,4 @@
  - Cassandra was developed internally at Facebook in 2008, became Apache project in 2010
  
 ### Where can I learn more (beyond this short introduction)
- - (DataStax)[http://cassandra.apache.org/doc/latest/]
+ - [http://cassandra.apache.org/doc/latest/](DataStax)
