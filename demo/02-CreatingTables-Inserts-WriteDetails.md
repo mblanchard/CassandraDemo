@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS listings (
 ```
 INSERT INTO demo.listings (listing_id, name, city, state)
   VALUES (9,'Demo Listing','Chicago','Illinois');
-  USING option AND option
 ```
 Note that not all columns are referenced. No nulls or placeholders will be stored, those columns just won't be captured.
 
