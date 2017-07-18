@@ -1,4 +1,5 @@
 ### Denormalization and data modeling with access patterns (Chebotko methodology)
+- Writes are cheap, "Write the data you want to read"
 - Sorting/clustering in C\* happens on writes only
 - Reads are always sequential and do not allow for filtering (beyond defined partition keys and clustering columns)
 - Joins are not possible (at least not in C\* alone, Apache Spark can be used to provide client-side joins)
