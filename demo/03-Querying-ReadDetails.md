@@ -4,10 +4,10 @@ SELECT * FROM listings;
 ```
 
 ### What's in a read?
-- Check the memtable (recent writes will be captured here)
+- Check the memtable (with a bloom filter). All recent writes will be captured here
+  - Bloom filters are probabilistic, they can only provide potential matches and definite non-matches
 - Check the row cache, if enabled (hot/frequently accessed rows are cached here)
 - On a memtable/cache miss, look at likely target SSTables in the bloom filter
-  - Bloom filters are probabilistic, they can only provide potential matches and definite non-matches
 - Check the partition key cache for requested partition key, if enabled
   - It will contain the disk-offset of frequently accessed partition keys
 - Otherwise, use the partition summary/partition index to find the disk offset for the requested partition key and read sequentially.
