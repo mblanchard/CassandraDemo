@@ -17,7 +17,7 @@ cqlsh -u cassandra -p [PASSWORD]
 - Usually one per application
 ```
 CREATE KEYSPACE IF NOT EXISTS demo 
-  WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3}
+  WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
 ```
 
 ### Managing CAP through replication factor and consistency levels
