@@ -28,6 +28,11 @@ Note that not all columns are referenced. No nulls or placeholders will be store
 - Deletes are just writes. The data is marked with a tombstone, and is ignored during compaction.
 - Updates are also just writes. The new data is stored alongside the old in memtable/SSTables, and on read the latest record is returned.
 
+### Coordinators, replication, and token ranges
+- First section of primary key is partition key
+- Coordinator hashes partition key >> token
+- Replicas distributed around token ring based on node token ranges and network topology.
+
 ### Writing some more sample data from csv
 ```
 COPY demo.listings FROM 'listings.csv' WITH DELIMITER=',' AND HEADER=TRUE;
