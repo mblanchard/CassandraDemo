@@ -24,4 +24,5 @@ Some major users are Apple, Cisco, Facebook, Netflix, Rackspace, Reddit, Soundcl
  - [Apache docs](http://cassandra.apache.org/doc/latest/)
  - [DataStax docs/training materials](http://docs.datastax.com/en/landing_page/doc/index.html) 
  - [O'Reilly exam prep/certification](http://www.oreilly.com/data/cassandracert)
- - [KKovacs somewhat dated but still very useful blog post comparing non-relational databases](https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+ - [KKovacs blog post comparing non-relational databases](https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+   - somewhat dated but still very useful 
